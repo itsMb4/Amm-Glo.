@@ -43,12 +43,7 @@ function showPage(page) {
               additionalInfo = sanitizeInput(additionalInfo);
               
               // Replace 'your-email@example.com' with your company's email address
-              var mailToLink = 'mailto:your-emiliojaramillo007@gmail.com' +
-                               '?subject=Quote Request' +
-                               '&body=Full Name: ' + fullName +
-                               '%0D%0ACompany Name: ' + companyName +
-                               '%0D%0AEmail: ' + email +
-                               '%0D%0AAdditional Information: ' + additionalInfo;
+              var mailToLink = `mailto:your-emiliojaramillo007@gmail.com?subject=Quote Request&body=Full Name: ${fullName}%0D%0ACompany Name: ${companyName}%0D%0AEmail: ${email}%0D%0AAdditional Information: ${additionalInfo}`;
               
               // Open default email client with prefilled fields
               window.location.href = mailToLink;
