@@ -1,0 +1,267 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 200px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: gold;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    margin: 20px;
+}
+
+.page-content {
+    text-align: right;
+}
+
+.text-container {
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.page-content h2,
+.page-content p {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.additional-text p {
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.additional-text p:nth-of-type(1) {
+    text-align: left;
+}
+
+.additional-text p:nth-of-type(2) {
+    text-align: center;
+}
+
+.additional-text p:nth-of-type(3) {
+    text-align: right;
+}
+
+.page-content h2,
+.page-content p,
+.additional-text p {
+    animation: slideUp 1.5s ease-in-out forwards, fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.page#home .page-content h2,
+.page#home .page-content p,
+.page#about .page-content h2,
+.page#about .page-content p,
+.page#services .additional-text p,
+.page#contact .additional-text p {
+    opacity: 1;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.founder-box {
+    background-color: rgba(255, 215, 0, 0.5);
+    padding: 40px;
+    margin-top: 100px;
+    text-align: center;
+    width: 50vh;
+    height: 50vh;
+    margin-left: right;
+    margin-right: right;
+}
+
+#content {
+    height: 100%;
+}
+
+.founder-box p {
+    color: black;
+    font-style: italic;
+}
+
+.page#services .page-content h2 {
+    color: gold;
+}
+
+.page#services .page-content h2 {
+    text-align: center;
+}
+
+.page#services .page-content p {
+    text-align: left;
+    font-size: 35px;
+}
+
+.page#services .text-container {
+    position: left;
+}
+
+.truck-image{
+    float: right;
+    width:15%;
+    animation: fadeIn 2.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -1;
+    animation: fadeIn 2.5s opacity 0.35;
+    opacity: 0.35;
+}
+
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+   opacity: 0.35;
+    z-index: -1;
+}
+.quote-form {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    width: 400px; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange child elements vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin-left: auto; /* Align to the right */
+  }
+  
+  .quote-form h2 {
+    color: black;
+    margin: 0; /* Remove default margin */
+  }
+  
+  .form-group {
+    margin: 0; /* Remove default margin */
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: calc(100% - 16px); /* Adjust width to fit within container */
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+  .page#home {
+    height: 250%; /* Increase canvas length by 50% */
+  }
+  
+  button[type="submit"] {
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%; /* Button width to match container width */
+  }
+  .services-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .services-text p {
+    font-size: 30px;
+    color: gold;
+    font-weight: bold;
+  }
+  .quote-form,
+.services-text {
+    animation: slideUp 1.5s ease-in-out forwards, fadeIn 1.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
