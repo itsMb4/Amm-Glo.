@@ -109,16 +109,22 @@ header {
     }
 }
 
-
+.founder-box {
+    background-color: rgba(255, 215, 0, 0.5);
+    padding: 40px;
+    margin-top: 100px;
+    text-align: center;
+    width: 50vh;
+    height: 50vh;
+    margin-left: right;
+    margin-right: right;
+}
 
 #content {
     height: 100%;
 }
 
-.founder-box p {
-    color: black;
-    font-style: italic;
-}
+
 
 .page#services .page-content h2 {
     color: gold;
