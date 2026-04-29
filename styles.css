@@ -1,10 +1,8 @@
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -15,6 +13,7 @@ body {
 
 header {
   width: 100%;
+  min-height: 90px;
   padding: 15px 8%;
   background: #ffffff;
   display: flex;
@@ -29,11 +28,13 @@ header {
 .logo img {
   width: 150px;
   height: auto;
+  display: block;
 }
 
 .nav-links {
   display: flex;
-  gap: 28px;
+  align-items: center;
+  gap: 30px;
 }
 
 .nav-links a {
@@ -41,28 +42,22 @@ header {
   color: #1d1d1d;
   font-size: 16px;
   font-weight: 600;
-  transition: 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #c62828;
 }
 
-
-.container {
-  width: 100%;
-}
-
-.page-content {
+.home-page {
   position: relative;
-  min-height: calc(100vh - 80px);
+  min-height: calc(100vh - 145px);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 80px 8%;
   overflow: hidden;
 }
-
 
 .video-background {
   position: absolute;
@@ -79,89 +74,132 @@ header {
 .video-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
-
 
 .text-container {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  background: rgba(255, 255, 255, 0.95);
-  padding: 40px;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.94);
+  padding: 45px;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.18);
   text-align: center;
 }
 
-.text-container h2 {
-  font-size: 40px;
+.home-text h2 {
+  font-size: 42px;
+  line-height: 1.2;
   margin-bottom: 15px;
 }
 
-.text-container p {
-  font-size: 18px;
+.home-text p {
+  font-size: 22px;
 }
 
 .services-text {
+  width: 100%;
   background: #111827;
-  color: white;
+  color: #ffffff;
   text-align: center;
-  padding: 15px;
+  padding: 18px 8%;
+  font-size: 18px;
   font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-#services .page-content {
-  align-items: flex-start;
+
+.standard-page {
+  min-height: calc(100vh - 145px);
+  padding: 80px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f4f6f8, #ffffff);
 }
 
-#services .text-container {
+
+.services-container {
   text-align: left;
+  max-width: 1000px;
 }
 
-#services h2 {
+.services-container h2 {
   color: #c62828;
-  margin-top: 20px;
+  font-size: 34px;
+  margin: 20px 0 15px;
+}
+
+.services-container p {
+  font-size: 18px;
+  margin-bottom: 35px;
 }
 
 .truck-image {
   width: 100%;
-  max-width: 350px;
-  margin: 15px auto;
+  max-width: 360px;
   display: block;
+  margin: 20px auto;
 }
 
-#about .page-content,
-#contact .page-content {
-  background: linear-gradient(135deg, #f4f6f8, #ffffff);
+/* ABOUT PAGE */
+.about-container {
+  max-width: 900px;
 }
 
-#about .text-container p,
-#contact .text-container p {
-  font-size: 18px;
+.about-container p {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+.third p {
+  font-weight: 600;
 }
 
 
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+    padding: 15px 5%;
+  }
+
+  .logo img {
+    width: 130px;
   }
 
   .nav-links {
+    gap: 18px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .text-container {
-    padding: 25px;
+  .home-page,
+  .standard-page {
+    padding: 60px 5%;
   }
 
-  .text-container h2 {
+  .text-container {
+    padding: 30px 22px;
+  }
+
+  .home-text h2 {
+    font-size: 30px;
+  }
+
+  .home-text p,
+  .services-container p,
+  .about-container p {
+    font-size: 16px;
+  }
+
+  .services-container h2 {
     font-size: 28px;
   }
 
-  .text-container p {
-    font-size: 16px;
+  .services-text {
+    font-size: 15px;
   }
 }
