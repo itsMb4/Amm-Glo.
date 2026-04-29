@@ -13,7 +13,7 @@ body {
 
 header {
   width: 100%;
-  min-height: 86px;
+  min-height: 70px;
   padding: 14px 7%;
   background: #000;
   display: flex;
@@ -26,7 +26,7 @@ header {
 }
 
 .logo img {
-  width: 155px;
+  width: 130px;
   height: auto;
   display: block;
 }
@@ -34,7 +34,7 @@ header {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 34px;
+  gap: 24px;
 }
 
 .nav-links a {
@@ -57,7 +57,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 90px 7%;
+  padding: 60px 7%;
   overflow: hidden;
 }
 
