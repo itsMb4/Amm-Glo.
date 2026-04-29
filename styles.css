@@ -143,7 +143,6 @@ header {
   color: #d4af37;
   font-size: 34px;
   margin: 12px 0 14px;
-  letter-spacing: 0.5px;
 }
 
 .services-container p {
@@ -176,41 +175,52 @@ header {
   font-weight: 600;
 }
 
-.contact-wrapper {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-
-  margin-left: auto;
-  max-width: 700px;
+.contact-page {
+  position: relative;
+  justify-content: flex-end;
+  overflow: hidden;
 }
 
-.contact-logo img {
-  width: 160px;
-  opacity: 0.95;
+.contact-background-logo {
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  opacity: 0.85;
 }
 
-.contact-info {
+.contact-background-logo img {
+  width: min(38vw, 430px);
+  height: auto;
+  display: block;
+}
+
+.contact-container {
+  position: relative;
+  z-index: 2;
+  max-width: 560px;
   text-align: left;
 }
 
-.contact-info h2 {
+.contact-container h2 {
   color: #d4af37;
-  margin-bottom: 10px;
+  font-size: 38px;
+  margin-bottom: 14px;
 }
 
-.contact-info p {
-  font-size: 18px;
-  color: #ddd;
-  margin-bottom: 6px;
+.contact-container p {
+  color: #e0e0e0;
+  font-size: 19px;
+  margin-bottom: 8px;
 }
+
 
 @keyframes fadeInUp {
   from {
     opacity: 0;
     transform: translateY(28px);
   }
-
   to {
     opacity: 1;
     transform: translateY(0);
@@ -218,6 +228,7 @@ header {
 }
 
 @media (max-width: 768px) {
+
   header {
     flex-direction: column;
     gap: 14px;
@@ -263,5 +274,28 @@ header {
 
   .services-text {
     font-size: 13px;
+  }
+
+  /* CONTACT MOBILE FIX */
+  .contact-page {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contact-background-logo {
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    margin-bottom: 25px;
+    opacity: 0.75;
+  }
+
+  .contact-background-logo img {
+    width: 220px;
+  }
+
+  .contact-container {
+    max-width: 100%;
   }
 }
