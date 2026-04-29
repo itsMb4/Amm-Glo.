@@ -175,8 +175,32 @@ header {
   color: #d4af37;
   font-weight: 600;
 }
+.contact-container {
+  text-align: right;
+  margin-left: auto;
+  max-width: 650px;
+}
 
-/* FADE-IN ANIMATION */
+.contact-logo {
+  margin-bottom: 18px;
+}
+
+.contact-logo img {
+  width: 160px;
+  opacity: 0.95;
+}
+
+.contact-container h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+.contact-container p {
+  font-size: 18px;
+  color: #ddd;
+  margin-bottom: 6px;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
